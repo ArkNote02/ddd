@@ -4,6 +4,9 @@ import com.github.arknote02.book.domain.Book;
 import com.github.arknote02.book.domain.BookId;
 import com.github.arknote02.book.domain.Repository;
 
+/**
+ * Repositoryの実装.
+ */
 public class BookRepository implements Repository<Book, BookId> {
 
   @Override

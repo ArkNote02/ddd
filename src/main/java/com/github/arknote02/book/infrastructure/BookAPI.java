@@ -4,6 +4,10 @@ import com.github.arknote02.book.domain.Book;
 import com.github.arknote02.book.domain.BookId;
 import com.github.arknote02.book.usecase.BookUseCase;
 
+/**
+ * エンドポイントの提供.
+ * ドメインでバリデーションする場合は返ってきた例外の処理もする.
+ */
 public class BookAPI {
 
   private final BookUseCase registerBook;

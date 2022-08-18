@@ -5,6 +5,9 @@ import com.github.arknote02.book.domain.Book;
 import com.github.arknote02.book.domain.BookId;
 import com.github.arknote02.book.domain.Repository;
 
+/**
+ * ユースケースの実装.
+ */
 class BookUseCaseImplementer implements BookUseCase {
 
   private final Repository<Book, BookId> repository;
