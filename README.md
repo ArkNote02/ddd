@@ -1,13 +1,18 @@
-# DDD
+# 会員情報・認証基盤をつくる
+ほぼメモの代わり
+## 取り入れる設計手法
+- リアクティブ
+- DDD + CQRS
 ## パッケージ構成
 - `com.github.arknote02` ベース（グループID）
-- `com.github.arknote02.book` アプリ名（アーティファクトID）  
-SpringBootなら起動クラスも置いとく。
-- `com.github.arknote02.book.domain` ドメイン
-- `com.github.arknote02.book.infrastructure` インフラ  
-フレームワークや外部リソースに依存するコード。  
-エンドポイントは別パッケージに切り出してもいいかも。
-- `com.github.arknote02.book.usecase` ユースケース  
-インタフェースのみにしてフレームワークへの依存を排除。
+  - `account` アプリ名（アーティファクトID）
+    - `domain` ドメイン
+    - `infrastructure` インフラ  
+      フレームワークや外部リソースに依存するコード。  
+      エンドポイントは別パッケージに切り出してもいいかも。
+    - `usecase` ユースケース  
+      インタフェースのみにしてフレームワークへの依存を排除。
 ## その他
-今回は使ってないけどlombok使うとラク
+- ~~今回は使ってないけどlombok使うとラク~~ 入れた
+- `Mono`,`Flux`とはズッ友
+- とりあえずコンテナ化する。jib使うかは悩み

@@ -1,0 +1,21 @@
+spring:
+  main.banner-mode: off
+  lifecycle.timeout-per-shutdown-phase: 15s
+#  r2dbc:
+#    #driverClassName: org.h2.Driver
+#    url: r2dbc:h2:mem:///testdb
+#    username: sa
+#    password: password
+#  jpa:
+#    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+#  h2:
+#    console:
+#      enabled: true
+server.shutdown: graceful
+logging.level:
+  root: INFO
+  com.github.arknote02: INFO
+management:
+  server.port: 8081
+  endpoints.web.exposure.include: "*"
+  endpoint.shutdown.enabled: true

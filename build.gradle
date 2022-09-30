@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.7.3'
+    id "io.spring.dependency-management" version "1.0.13.RELEASE"
 }
 
 group 'com.github.arknote02'
@@ -10,8 +12,36 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-webflux-ui
+    implementation 'org.springdoc:springdoc-openapi-webflux-ui:1.6.11'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-r2dbc
+    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+
+    // https://mvnrepository.com/artifact/io.r2dbc/r2dbc-h2
+    implementation 'io.r2dbc:r2dbc-h2'
+
+    // https://mvnrepository.com/artifact/commons-codec/commons-codec
+    implementation 'commons-codec:commons-codec'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
 test {
